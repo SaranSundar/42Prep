@@ -192,11 +192,11 @@
     }
 
     #menu .selected {
-        color: #FFF176;
+        color: #05d1c2;
     }
 
     #menu li:active {
-        color: #FFF9C4;
+        color: #22d1d1;
     }
 
     #menu li {

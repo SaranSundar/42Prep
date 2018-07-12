@@ -27,12 +27,15 @@ class NavBar extends Component {
                             <NavLink activeClassName={"selected"} exact={true} to="/">
                                 <li>HOME</li>
                             </NavLink>
-                            <Link to="/Videos">
+                            <NavLink activeClassName={"selected"} exact={true} to="/Videos">
                                 <li>VIDEOS</li>
-                            </Link>
-                            <Link to="/Code">
+                            </NavLink>
+                            <NavLink activeClassName={"selected"} exact={true} to="/Code">
                                 <li>CODE</li>
-                            </Link>
+                            </NavLink>
+                            <NavLink activeClassName={"selected"} exact={true} to="/Resources">
+                                <li>Resources</li>
+                            </NavLink>
                             {/*<div className="rightSide">*/}
                             {/*<Link to="/Cart">*/}
                             {/*<li>*/}
