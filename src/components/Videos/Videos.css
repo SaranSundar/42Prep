@@ -1,3 +1,39 @@
-.Videos {
+.video-thumbnail {
+    width: 300px;
+    display: inline-block !important;
+    padding: 10px 40px 10px 40px;
+}
 
+.video-player {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.video-thumbnail:hover {
+    width: 330px;
+    cursor: pointer;
+}
+
+.Videos {
+    padding-top: 50px;
+}
+
+.item {
+    text-align: center;
+    padding: 20px;
+}
+
+.carousel {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.carousel-control {
+    background-image: none !important;
+}
+
+.carousel {
+    background-color: #afc8ff;
 }
