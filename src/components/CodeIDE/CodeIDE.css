@@ -1,3 +1,43 @@
 .CodeIDE {
 
 }
+
+.code-title {
+    font-size: 25px;
+    font-weight: bold;
+    color: #04a6d7;
+}
+
+.hex {
+    stroke-width: 4px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 198px;
+    stroke-dashoffset: 198px;
+    animation: spin 3.5s infinite linear;
+    stroke: #4afcd9;
+}
+
+@keyframes spin {
+    100% {
+        stroke-dashoffset: -198px;
+    }
+}
+
+#animation {
+    text-align: center;
+    width: 40vw;
+    height: 40vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+svg {
+    margin-top: 20px;
+    width: 25vw;
+    height: 25vw;
+}
