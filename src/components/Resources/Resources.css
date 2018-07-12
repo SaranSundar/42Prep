@@ -1,3 +1,19 @@
 .Resources {
     padding-top: 50px;
 }
+
+.resource-title {
+    font-size: 25px;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+.resource-details {
+    font-size: 20px;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+.resource-title:hover {
+    color: #13a1ff;
+}
