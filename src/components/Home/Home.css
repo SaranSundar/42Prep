@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:800');
+
+.hero-image {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+@media (max-width: 440px) {
+    .mobile-text {
+        font-size: 28px;
+    }
+}
+
+.darken-overlay div {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.13);
+}
+
+.faded {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    width: max-content;
+    border-radius: 2px;
+}
