@@ -4,6 +4,7 @@ import Home from "../Home/Home";
 import NavBar from "../NavBar/NavBar";
 import CodeIDE from "../CodeIDE/CodeIDE";
 import Resources from "../Resources/Resources";
+import Videos from "../Videos/Videos";
 
 class App extends Component {
     render() {
@@ -11,6 +12,7 @@ class App extends Component {
             <Fragment>
                 <NavBar/>
                 <Switch>
+                    <Route path="/Videos" exact component={Videos}/>
                     <Route path="/Code" exact component={CodeIDE}/>
                     <Route path="/Resources" exact component={Resources}/>
                     <Route path="/" exact component={Home}/>

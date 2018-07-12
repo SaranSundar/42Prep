@@ -8,7 +8,8 @@ class Resources extends Component {
     render() {
         return (
             <div className="Resources">
-                <a href="https://www.tutorialspoint.com/cprogramming/" target="_blank" rel="noopener noreferrer">Tutorials Point</a>
+                <a href="https://www.tutorialspoint.com/cprogramming/" target="_blank" rel="noopener noreferrer">Tutorials
+                    Point</a>
                 <p>Here you can simple and easy to understand examples over the absolute fundamentals such as variables,
                     loops, functions and much more.</p>
                 <a href="https://stackoverflow.com/" target="_blank" rel="noopener noreferrer">Stack Overflow</a>
