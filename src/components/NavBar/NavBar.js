@@ -33,7 +33,7 @@ class NavBar extends Component {
                             <NavLink activeClassName={"selected"} exact={true} to="/Code">
                                 <li>CODE</li>
                             </NavLink>
-                            <NavLink activeClassName={"selected"} exact={true} to="/Resource">
+                            <NavLink activeClassName={"selected"} exact={true} to="/Resources">
                                 <li>RESOURCES</li>
                             </NavLink>
                             {/*<div className="rightSide">*/}
