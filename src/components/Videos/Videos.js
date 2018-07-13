@@ -9,9 +9,10 @@ class Videos extends Component {
         super(props);
         this.state = {
             links: {
-                urls: ["vCAW7ybBFW8", "IzhMzY5avLI", "6j7oQletFbc"],
-                icons: ["https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-1.jpg", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-1.jpg", "https://images.pexels.com/photos/356378/pexels-photo-356378.jpeg?auto=compress&cs=tinysrgb&h=350"],
-                names: ["Day 1", "Day 2", "Dogs"]
+                urls: ["vCAW7ybBFW8", "IzhMzY5avLI", "6j7oQletFbc", "A71aqufiNtQ", "aeoUV-WIJ_A"],
+                icons: ["https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-1.jpg", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-1.jpg", "https://images.pexels.com/photos/356378/pexels-photo-356378.jpeg?auto=compress&cs=tinysrgb&h=350"
+                , "https://www.valuecoders.com/blog/wp-content/uploads/2016/08/react.png", "https://cdn.trendhunterstatic.com/thumbs/adidas-originals-popup-shop.jpeg"],
+                names: ["Day 1", "Day 2", "Dogs", "React Crash Course", "Adidas Sneakers"]
             },
             index: 0
         };

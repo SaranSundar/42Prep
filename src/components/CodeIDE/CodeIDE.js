@@ -8,6 +8,7 @@ class CodeIDE extends Component {
         this.state = {
             loaded: false
         };
+        this.frame = React.createRef();
     }
 
     componentDidMount() {
@@ -19,6 +20,9 @@ class CodeIDE extends Component {
 
     loadFrame = () => {
         this.setState({loaded: true});
+        setTimeout(() => {
+            this.frame.current.style.display = "block";
+        },500)
     };
 
     render() {
@@ -35,7 +39,7 @@ class CodeIDE extends Component {
                                  points="32,48.4575131106 2,62 2,94.9150262213 32,108.457513111 62,94.9150262213"/>
                     </svg>
                 </div>}
-                {<iframe onLoad={this.loadFrame} height="650px" width="100%"
+                {<iframe id="code-frame" ref={this.frame} onLoad={this.loadFrame} height="650px" width="100%"
                          src="https://repl.it/@sarans/TreasuredEnviousFrontend?lite=true"
                          scrolling="no" frameBorder="no"
                          allowFullScreen="true"

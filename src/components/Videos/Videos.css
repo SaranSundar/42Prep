@@ -59,16 +59,13 @@
 }
 
 .row {
-    overflow: scroll;
-    overflow-y: hidden;
+    overflow: hidden;
     width: max-content;
     padding: 0 200px 0 200px;
-    margin: 0 auto;
+    margin: 0 auto 30px -200px;
+
 }
 
-.row::-webkit-scrollbar {
-    width: 0;  /* remove scrollbar space */
-}
 .row__inner {
     transition: 450ms -webkit-transform;
     transition: 450ms transform;
