@@ -9,10 +9,9 @@ class Videos extends Component {
         super(props);
         this.state = {
             links: {
-                urls: ["vCAW7ybBFW8", "IzhMzY5avLI", "6j7oQletFbc", "A71aqufiNtQ", "aeoUV-WIJ_A"],
-                icons: ["https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-1.jpg", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-1.jpg", "https://images.pexels.com/photos/356378/pexels-photo-356378.jpeg?auto=compress&cs=tinysrgb&h=350"
-                , "https://www.valuecoders.com/blog/wp-content/uploads/2016/08/react.png", "https://cdn.trendhunterstatic.com/thumbs/adidas-originals-popup-shop.jpeg"],
-                names: ["Day 1", "Day 2", "Dogs", "React Crash Course", "Adidas Sneakers"]
+                urls: ["aUqO-dgzMw4", "TfJahweD8X0", "TEHA_IwNk34", "47IS8VtAM9E", "sq6n8dL117c", "ka6cg9szUtQ", "XGxbXMP6k8k", "gBC_Fd8EE8A"],
+                icons: ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLKRHHd6aXMs4yswEa0bBovb6sR9Jnk21FkxtdB2ze-JbkxfP4", "https://i0.wp.com/codeexercise.com/wp-content/uploads/2016/11/WHILE-Loops-statement.gif", "https://www.studytonight.com/c/images/functions-and-arguments.gif", "https://image.slidesharecdn.com/pointerincppt1-170205042520/95/pointer-in-c-program-4-638.jpg?cb=1486269484", "https://overiq.com/uploads/character-pointer-and-string-literal-1504599248003.png", "https://i.ytimg.com/vi/aGq0wkrphM8/maxresdefault.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRndDQoCuCA_DDWpbXHQx7B58-ItlEeAJORdIdHiJhLIdJ-mGkw", "https://www.daniweb.com/attachments/large/3/diagram2.png"],
+                names: ["Day 02 – Basic Variable Types", "Day 02 – Basic Logic & Loops", "Day 02 – Functions", "Day 03 – Pointer", "Day 03 – String ", "Day 03 – Array", "Day 04 – Recursion", "Day 04 – Backtracking"]
             },
             index: 0
         };
@@ -32,7 +31,9 @@ class Videos extends Component {
         };
         let innerVids = [];
         for (let i = 0; i < this.state.links.urls.length; i++) {
-            let vid = (<div className="tile" onClick={() => {this.onVideoClick(i)}}>
+            let vid = (<div className="tile" onClick={() => {
+                this.onVideoClick(i)
+            }}>
                 <div className="tile__media">
                     <img className="tile__img"
                          src={this.state.links.icons[i]} alt=""/>
@@ -59,16 +60,11 @@ class Videos extends Component {
                             opts={opts}
                             onReady={this._onReady}
                         />
-                        <textarea style={{background: "#d5fdff", color: "black"}} className="output-text-scroll" readOnly="readOnly">
-                            RWFW
-                            EF
 
-                            E"Wfewl]feewf ewf
-                            ;wf eew
-                            few ,efewfew ew fe wf ewf
-                            eqwf'f
-                            ewgew gewf ewf ef ewf
-                        </textarea>
+                        {/*<HelperText/>*/}
+                        <div className="image-container">
+                            <img src="./day1.jpeg" className="image-output"/>
+                        </div>
                     </div>
                     <iframe onLoad={this.loadFrame} height="550px" width="100%"
                             src="https://repl.it/@sarans/TreasuredEnviousFrontend?lite=true"

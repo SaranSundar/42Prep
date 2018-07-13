@@ -1,5 +1,9 @@
 .Resources {
     padding-top: 50px;
+    background: url(bg.jpg) no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: calc(100vh - 75px);
 }
 
 .resource-title {
@@ -12,6 +16,7 @@
     font-size: 20px;
     margin-left: 15px;
     font-weight: bold;
+    color: #500700;
 }
 
 .resource-title:hover {

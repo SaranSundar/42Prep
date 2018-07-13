@@ -154,7 +154,7 @@
     .card {
         margin: 0;
         padding: 0;
-        background: #1d0788;
+        background: #080449;
         border-radius: 2px;
         display: inline-block;
         position: relative;
@@ -192,11 +192,11 @@
     }
 
     #menu .selected {
-        color: #05d1c2;
+        color: #fffe00;
     }
 
     #menu li:active {
-        color: #22d1d1;
+        color: #e9e800;
     }
 
     #menu li {
