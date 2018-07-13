@@ -63,7 +63,7 @@ class Videos extends Component {
 
                         {/*<HelperText/>*/}
                         <div className="image-container">
-                            <img src="./day1.jpeg" className="image-output"/>
+                            <img src={"./day" + (this.state.index + 1) + ".jpeg"} className="image-output"/>
                         </div>
                     </div>
                     <iframe onLoad={this.loadFrame} height="550px" width="100%"
