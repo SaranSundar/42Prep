@@ -1,12 +1,25 @@
 import React, {Component} from 'react';
 import "./Videos.css"
-import Carousel from "react-bootstrap/es/Carousel";
 import YouTube from 'react-youtube';
 
 
 class Videos extends Component {
 
-    state = {};
+    constructor(props) {
+        super(props);
+        this.state = {
+            links: {
+                urls: ["vCAW7ybBFW8", "IzhMzY5avLI"],
+                icons: ["https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-1.jpg", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-1.jpg"],
+                names: ["Day 1", "Day 2"]
+            },
+            index: 0
+        };
+    }
+
+    onVideoClick = (x) => {
+        this.setState({index: x});
+    };
 
     render() {
         const opts = {
@@ -16,44 +29,50 @@ class Videos extends Component {
                 autoplay: 1
             }
         };
+        let innerVids = [];
+        for (let i = 0; i < this.state.links.urls.length; i++) {
+            let vid = (<div className="tile" onClick={() => {this.onVideoClick(i)}}>
+                <div className="tile__media">
+                    <img className="tile__img"
+                         src={this.state.links.icons[i]} alt=""/>
+                </div>
+                <div className="tile__details">
+                    <div className="tile__title">
+                        {this.state.links.names[i]}
+                    </div>
+                </div>
+            </div>);
+            innerVids.push(vid);
+        }
         return (
             <div className="Videos">
-                <Carousel>
-                    <Carousel.Item>
-                        <img className="video-thumbnail" width={900} height={500} alt="900x500"
-                             src="https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13001000/Beagle-On-White-01-400x267.jpg"/>
-                        <img className="video-thumbnail" width={900} height={500} alt="900x500"
-                             src="https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13001000/Beagle-On-White-01-400x267.jpg"/>
-                        <img className="video-thumbnail" width={900} height={500} alt="900x500"
-                             src="https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13001000/Beagle-On-White-01-400x267.jpg"/>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img className="video-thumbnail" width={900} height={500} alt="900x500"
-                             src="https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13001000/Beagle-On-White-01-400x267.jpg"/>
-                        <img className="video-thumbnail" width={900} height={500} alt="900x500"
-                             src="https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13001000/Beagle-On-White-01-400x267.jpg"/>
-                        <img className="video-thumbnail" width={900} height={500} alt="900x500"
-                             src="https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13001000/Beagle-On-White-01-400x267.jpg"/>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img className="video-thumbnail" width={900} height={500} alt="900x500"
-                             src="https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13001000/Beagle-On-White-01-400x267.jpg"/>
-                        <img className="video-thumbnail" width={900} height={500} alt="900x500"
-                             src="https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13001000/Beagle-On-White-01-400x267.jpg"/>
-                        <img className="video-thumbnail" width={900} height={500} alt="900x500"
-                             src="https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13001000/Beagle-On-White-01-400x267.jpg"/>
-                    </Carousel.Item>
-                </Carousel>
+                <div className="row">
+                    <div className="row__inner">
+                        {innerVids}
+                    </div>
+                </div>
                 <div className="video-player">
                     <YouTube
-                        videoId="2g811Eo7K8U"
+                        videoId={this.state.links.urls[this.state.index]}
                         opts={opts}
                         onReady={this._onReady}
                     />
+                    <textarea className="output-text-scroll" readOnly="readOnly">
+                    RWFW
+                    EF
+
+                    E"Wfewl]feewf ewf
+                    ;wf eew
+                    few ,efewfew ew fe wf ewf
+                    eqwf'f
+                    ewgew gewf ewf ef ewf
+                </textarea>
                 </div>
-                <p>HERWREW EWFJEWKF OIWEFIOEWNKFNEWPIFJ EOWJFKEWFP
-                    EWFJKEWNFEWFNO EWNFEWFPIOEWFPIWE OJWEFIE PWEKJFO PIJEWFNPJNEW
-                    JOEFNOEWFNONWFEWO</p>
+                <iframe onLoad={this.loadFrame} height="550px" width="100%"
+                        src="https://repl.it/@sarans/TreasuredEnviousFrontend?lite=true"
+                        scrolling="no" frameBorder="no"
+                        allowFullScreen="true"
+                        sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"/>
             </div>
         );
     }
