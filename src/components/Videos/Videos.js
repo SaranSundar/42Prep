@@ -9,9 +9,9 @@ class Videos extends Component {
         super(props);
         this.state = {
             links: {
-                urls: ["vCAW7ybBFW8", "IzhMzY5avLI"],
-                icons: ["https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-1.jpg", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-1.jpg"],
-                names: ["Day 1", "Day 2"]
+                urls: ["vCAW7ybBFW8", "IzhMzY5avLI", "6j7oQletFbc"],
+                icons: ["https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-1.jpg", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-1.jpg", "https://images.pexels.com/photos/356378/pexels-photo-356378.jpeg?auto=compress&cs=tinysrgb&h=350"],
+                names: ["Day 1", "Day 2", "Dogs"]
             },
             index: 0
         };
@@ -46,33 +46,35 @@ class Videos extends Component {
         }
         return (
             <div className="Videos">
-                <div className="row">
-                    <div className="row__inner">
-                        {innerVids}
+                <div className="container">
+                    <div className="row">
+                        <div className="row__inner">
+                            {innerVids}
+                        </div>
                     </div>
-                </div>
-                <div className="video-player">
-                    <YouTube
-                        videoId={this.state.links.urls[this.state.index]}
-                        opts={opts}
-                        onReady={this._onReady}
-                    />
-                    <textarea className="output-text-scroll" readOnly="readOnly">
-                    RWFW
-                    EF
+                    <div className="video-player">
+                        <YouTube
+                            videoId={this.state.links.urls[this.state.index]}
+                            opts={opts}
+                            onReady={this._onReady}
+                        />
+                        <textarea style={{background: "#d5fdff", color: "black"}} className="output-text-scroll" readOnly="readOnly">
+                            RWFW
+                            EF
 
-                    E"Wfewl]feewf ewf
-                    ;wf eew
-                    few ,efewfew ew fe wf ewf
-                    eqwf'f
-                    ewgew gewf ewf ef ewf
-                </textarea>
+                            E"Wfewl]feewf ewf
+                            ;wf eew
+                            few ,efewfew ew fe wf ewf
+                            eqwf'f
+                            ewgew gewf ewf ef ewf
+                        </textarea>
+                    </div>
+                    <iframe onLoad={this.loadFrame} height="550px" width="100%"
+                            src="https://repl.it/@sarans/TreasuredEnviousFrontend?lite=true"
+                            scrolling="no" frameBorder="no"
+                            allowFullScreen="true"
+                            sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"/>
                 </div>
-                <iframe onLoad={this.loadFrame} height="550px" width="100%"
-                        src="https://repl.it/@sarans/TreasuredEnviousFrontend?lite=true"
-                        scrolling="no" frameBorder="no"
-                        allowFullScreen="true"
-                        sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"/>
             </div>
         );
     }

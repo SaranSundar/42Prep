@@ -5,17 +5,18 @@
 }
 
 .video-player {
-    margin-top: 50px;
+    margin-top: -35px;
     margin-left: 10px;
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-content: center;
 }
 
 .output-text-scroll {
     font-weight: bold;
     font-size: 20px;
-    overflow: scroll;
+    overflow: hidden;
+    overflow-y: auto;
     resize: none;
     width: 50%;
     margin-right: 5px;
@@ -28,8 +29,15 @@
     cursor: pointer;
 }
 
-.Videos {
-    padding-top: 50px;
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.Videos{
+    background: url("/bg.jpg") no-repeat;
+    background-size: cover;
+    width: 100%;
 }
 
 .item {
@@ -51,9 +59,15 @@
 }
 
 .row {
-    overflow: auto;
-    width: 80%;
+    overflow: scroll;
+    overflow-y: hidden;
+    width: max-content;
+    padding: 0 200px 0 200px;
     margin: 0 auto;
+}
+
+.row::-webkit-scrollbar {
+    width: 0;  /* remove scrollbar space */
 }
 .row__inner {
     transition: 450ms -webkit-transform;
@@ -61,7 +75,7 @@
     transition: 450ms transform, 450ms -webkit-transform;
     font-size: 0;
     white-space: nowrap;
-    margin: 70.3125px 0;
+    margin: 35px 0;
     padding-bottom: 10px;
     width: 100%;
     display: flex;
@@ -130,10 +144,11 @@
     left: 0;
     width: 100%;
     font-size: 30px;
-    margin-left: 7px;
-    margin-top: -18px;
+    margin-left: 4px;
+    margin-top: -23px;
     text-align: center;
     z-index: 2;
+    color: white;
 }
 .tile:hover .tile__details {
     opacity: 1;
